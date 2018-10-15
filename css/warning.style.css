@@ -1,0 +1,150 @@
+
+
+/*
+    设置父元素，填充整个窗口
+    z-index:设置高可以防止覆盖
+*/
+.manager {
+
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+
+}
+
+/*
+    设置子元素，用于显示提醒框
+*/
+
+.manager-box {
+    position: absolute;
+    width: 40em;
+    height: 28em;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: white;
+    border-radius: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    animation: showUp 1.5s both;
+
+}
+
+/*
+    设置提示框上方颜色样式
+*/
+
+.manager-color {
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    height: 10em;
+    background-image: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+}
+
+/*
+    设置全局文字样式
+*/
+
+.manager-content {
+    position: relative;
+    color: #929292;
+    margin-top: 3em;
+    margin-left: 3em;
+    font-size: 1.3em;
+    text-align: left;
+}
+
+/*
+    设置标题样式
+*/
+
+.manager-content>span {
+    display: inline-block;
+    font-size: 2.5em;
+}
+
+/*
+    设置两行样式
+*/
+
+.manager-content>div {
+    margin: .6em 0;
+}
+
+/*
+    设置关闭按钮样式
+*/
+
+.manager-cancel {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    border-radius: 50%;
+    background:#aacefc;
+    width: 3em;
+    height: 3em;
+    text-align: center;
+    transition: .5s;
+}
+
+/*
+    设置关闭按钮中的icon样式
+*/
+
+.manager-cancel>i {
+    color: white;
+    font-size: 2em;
+    line-height: 1.5em;
+    transition: .5s;
+}
+
+/*
+    设置左上方图片样式
+*/
+
+img {
+    position: absolute;
+    left: 3em;
+    top: 2em;
+    width: 10em;
+    height: 10em;
+}
+
+/*
+    设置悬浮在关闭按钮中的样式
+*/
+
+.manager-cancel:hover {
+    background: #a1c4fd;
+}
+
+/*
+    设置初始动画
+*/
+
+@keyframes showUp {
+    0% {
+        width: 20em;
+        height: 14em;
+    }
+
+    50% {
+        width: 40em;
+        height: 14em;
+    }
+
+    100% {
+        width: 40em;
+        height: 28em;
+    }
+}

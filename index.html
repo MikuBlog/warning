@@ -1,151 +1,35 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <style>
-        * {
-
-            padding: 0;
-            margin: 0;
-
-        }
-
-        body,
-        html {
-
-            height: 100%;
-            font-size: 12px;
-
-        }
-
-        .manager {
-
-            position: fixed;
-            z-index: 3;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: rgba(0, 0, 0, .5);
-
-        }
-
-        .manager-box {
-            position: absolute;
-            width: 40rem;
-            height: 28rem;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            margin: auto;
-            background: white;
-            border-radius: 1rem;
-            overflow: hidden;
-            animation: showUp 1.5s both;
-
-        }
-
-        .manager-head {
-            position: relative;
-            color: #929292;
-            margin-top: 4rem;
-            margin-left: 3rem;
-            font-size: 1.3rem;
-            text-align: left;
-        }
-
-        .manager-head>span {
-            display: inline-block;
-            margin-bottom: .5rem;
-            font-size: 3rem;
-        }
-
-        .manager-head>div {
-            margin: .5rem 0;
-        }
-
-        .manager-cancel {
-            position: absolute;
-            right: 1rem;
-            bottom: 1rem;
-            border-radius: 50%;
-            background: #a1c4fd;
-            width: 3rem;
-            height: 3rem;
-            text-align: center;
-            transition: .5s;
-        }
-
-        .manager-cancel>i {
-            color: white;
-            line-height: 3rem;
-            transition: .5s;
-        }
-
-        .manager-color {
-            border-top-right-radius: 1rem;
-            border-top-left-radius: 1rem;
-            height: 10rem;
-            background-image: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
-        }
-
-        img {
-            position: absolute;
-            left: 3rem;
-            top: 2rem;
-            width: 10rem;
-            height: 10rem;
-        }
-
-        .manager-cancel:hover {
-            background: rgb(0, 204, 255);
-        }
-
-        @keyframes showUp {
-            0% {
-                width: 20rem;
-                height: 14rem;
-            }
-
-            50% {
-                width: 40rem;
-                height: 14rem;
-            }
-
-            100% {
-                width: 40rem;
-                height: 28rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/warning.style.min.css" />
 </head>
-
 <body>
-    <div class="manager">
-        <div class="manager-box">
-            <div class="manager-color">
-                <img src="./image/水果.png">
-            </div>
-            <div class="manager-head">
-                <span>Error!</span>
-                <div>
-                    You do not have administrator privileges.
+    <body>
+
+        <div class="manager">
+            <div class="manager-box">
+                <div class="manager-color">
+                    <img class="manage-image">
                 </div>
-                <div>
-                    Please get administrator privileges.
+                <div class="manager-content">
+                    <span class="manage-content-head"></span>
+                    <div class="manage-content-first"></div>
+                    <div class="manage-content-second"></div>
                 </div>
-            </div>
-            <div class="manager-cancel">
-                <i class="fa fa-location-arrow fa-2x"></i>
+                <div class="manager-cancel">
+                    <i class="fa fa-location-arrow fa-2x"></i>
+                </div>
             </div>
         </div>
-    </div>
+        
+        <button>点击测试</button>
+    </body>
 </body>
-
+<script src="js/warning.config.js"></script>
+<script src="js/warning.main.min.js"></script>
 </html>
