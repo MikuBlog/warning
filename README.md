@@ -27,10 +27,8 @@
 <br/>
 
 ```
-<head>
-	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/warning.style.min.css" />
-</head>
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="screen" href="css/warning.style.min.css" />
 ```
 
 <br/>
@@ -59,13 +57,11 @@
 
 <br/>
 
->在body后引入js文件，两者顺序不可调换
+>在body后按如下顺序引入js文件
 
 <br/>
 
 ```
-<body>
-</body>
 <script src="js/warning.config.js"></script>
 <script src="js/warning.main.min.js"></script>
 ```
