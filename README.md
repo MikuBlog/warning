@@ -1,5 +1,7 @@
 # 自制警告提示框插件
 
+<br/>
+
 ## 效果图
 
 <img src="https://mikuimg.oss-cn-shenzhen.aliyuncs.com/githubPicture/%E6%95%88%E6%9E%9C%E5%9B%BE2.png"> 
@@ -16,7 +18,11 @@
 
 ## 使用
 
+<br/>
+
 >头部引入css文件
+
+<br/>
 
 ```
 <head>
@@ -25,7 +31,11 @@
 </head>
 ```
 
+<br/>
+
 >在body内引入这段html代码
+
+<br/>
 
 ```html
 <div class="manager">
@@ -45,7 +55,11 @@
 </div>
 ```
 
+<br/>
+
 >在body后引入js文件，两者顺序不可调换
+
+<br/>
 
 ```
 <body>
@@ -57,6 +71,8 @@
 <br/>
 
 ## 下载
+
+<br/>
 
 >git clone https://github.com/MikuBlog/warning.git
 
