@@ -10,6 +10,8 @@
 
 ## 简介
 
+<br/>
+
 >随手自制自制的一个简易的警告提示框
 
 >入口js为```warning.main.min.css```，入口css为```warning.style.min.css```
