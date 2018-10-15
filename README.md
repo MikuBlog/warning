@@ -94,7 +94,7 @@ var config = {
     //第二行文字
     secondLine:"Please get administrator privileges.",
 
-    //触发点击事件元素
+    //触发点击事件元素(选择器)
     element:"button"
 
 }
