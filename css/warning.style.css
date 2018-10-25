@@ -94,6 +94,7 @@
     width: 3em;
     height: 3em;
     text-align: center;
+    cursor: pointer;
     transition: .5s;
 }
 
@@ -147,4 +148,79 @@ img {
         width: 40em;
         height: 28em;
     }
+}
+
+
+/*
+    响应式
+*/
+
+@media screen and (min-width:0) and (max-width:850px) {
+
+    .manager-color {
+        border-top-right-radius: 1em;
+        border-top-left-radius: 1em;
+        height: 6em;
+        background-image: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+    }
+
+    img {
+        position: absolute;
+        left: 3em;
+        top: 2em;
+        width: 6em;
+        height: 6em;
+    }
+
+    .manager-content {
+        position: relative;
+        color: #929292;
+        margin-top: 2em;
+        margin-left: 1.5em;
+        font-size: 1.1em;
+        text-align: left;
+    }
+
+    .manager-content>span {
+        display: inline-block;
+        font-size: 1.5em;
+    }
+
+    .manager-content>div {
+        margin: .6em 0;
+    }
+
+    .manager-cancel {
+        position: absolute;
+        right: 1em;
+        bottom: 1em;
+        border-radius: 50%;
+        background:#aacefc;
+        width: 2.3em;
+        height: 2.3em;
+        text-align: center;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .manager-cancel>i {
+        color: white;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        transition: .5s;
+    }
+
+    @keyframes showUp {
+        0% {
+            width:0rem;
+            height:4rem;
+        }50% {
+            width:18rem;
+            height:4rem;
+        }100% {
+            width:18rem;
+            height:13rem;
+        }
+    }
+
 }

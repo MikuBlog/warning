@@ -2,7 +2,7 @@
 var config = {
 
     //图片的路径
-    imgSrc:"https://mikuimg.oss-cn-shenzhen.aliyuncs.com/Plugin/%E6%B0%B4%E6%9E%9C.png",
+    imgSrc:"https://mikuimg.oss-cn-shenzhen.aliyuncs.com/Plugin/warning/%E6%B0%B4%E6%9E%9C.png",
 
     //大标题
     headLine:"Error!",
