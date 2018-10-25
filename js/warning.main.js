@@ -17,19 +17,11 @@
 
         img = document.querySelector('.manage-image')
 
-    if (config.imgSrc != "")
-
         img.src = config.imgSrc
-
-    if (config.headLine != "")
 
         head.innerText = config.headLine
 
-    if (config.firstLine != "")
-
         first.innerText = config.firstLine
-
-    if (config.secondLine != "")
 
         second.innerText = config.secondLine
 
@@ -51,35 +43,31 @@
 
     }
 
-    //接收一个元素,如果元素不存在则会报错
+    //获取元素
+    var element = document.querySelector(config.element),
 
-    try {
+        managerCancel = document.querySelector('.manager-cancel')
 
-        var element = document.querySelector(config.element),
+    //判断元素是否存在
+    if (element) {
 
-            managerCancel = document.querySelector('.manager-cancel')
+        element.addEventListener('click', function() {
 
-        //继续判断元素是否存在
-        if (element) {
+            handleClick("block")
 
-            element.addEventListener('click', function() {
+        })
 
-                handleClick("block")
+        managerCancel.addEventListener('click', function() {
 
-            })
+            handleClick("none")
 
-            managerCancel.addEventListener('click', function() {
+        })
 
-                handleClick("none")
+    }else {
 
-            })
-
-        }
-
-    } catch (e) {
-
-        console.log("元素不存在")
+        console.log("元素不存在,请重新配置element值")
 
     }
+
 
 })()
