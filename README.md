@@ -58,9 +58,9 @@
 
 <br/>
 
->body后引入script
+>body后引入script加入如下代码
 
-```
+```js
 
     showWarn({
 
