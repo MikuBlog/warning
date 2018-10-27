@@ -58,31 +58,31 @@
 
 <br/>
 
->body后引入script
+>body后引入script加入如下代码
 
-```
-<script>
+<br/>
 
-    showWarn({
+```js
 
-        //图片的路径(可选 不填默认为蓝苹果)
-        imgSrc:"https://mikuimg.oss-cn-shenzhen.aliyuncs.com/Plugin/warning/%E6%B0%B4%E6%9E%9C.png",
+showWarn({
 
-        //大标题(可选 不填默认为"Error!")
-        headLine:"Error!",
+    //图片的路径(可选 不填默认为蓝苹果)
+    imgSrc:"https://mikuimg.oss-cn-shenzhen.aliyuncs.com/Plugin/warning/%E6%B0%B4%E6%9E%9C.png",
 
-        //第一行文字(可选 不填默认为"You do not have administrator privileges.")
-        firstLine:"You do not have administrator privileges.",
+    //大标题(可选 不填默认为"Error!")
+    headLine:"Error!",
 
-        //第二行文字(可选 不填默认为"Please get administrator privileges.")
-        secondLine:"Please get administrator privileges.",
+    //第一行文字(可选 不填默认为"You do not have administrator privileges.")
+    firstLine:"You do not have administrator privileges.",
 
-        //触发点击事件元素(CSS选择器 必填)
-        element:"button"
+    //第二行文字(可选 不填默认为"Please get administrator privileges.")
+    secondLine:"Please get administrator privileges.",
 
-    })
+    //触发点击事件元素(CSS选择器 必填)
+    element:"button"
 
-</script>
+})
+
 ```
 
 <br/>
