@@ -1,73 +1,76 @@
 
-//使用即执行函数，防止变量污染
+var showWarn = (function () {
 
-(function () {
+    return function (obj) {
 
-    /*
-        点击事件回调函数
-        headLine:设置显示头信息
-        firstLine:设置第一行内容
-        secondLine:设置第二行内容
-    */
-    var head = document.querySelector('.manage-content-head'),
+        var config = obj
 
-        first = document.querySelector('.manage-content-first'),
+        /*
+            headLine:设置显示头信息
+            firstLine:设置第一行内容
+            secondLine:设置第二行内容
+        */
 
-        second = document.querySelector('.manage-content-second'),
+        var head = document.querySelector('.manage-content-head'),
 
-        img = document.querySelector('.manage-image')
+            first = document.querySelector('.manage-content-first'),
 
-        img.src = config.imgSrc
+            second = document.querySelector('.manage-content-second'),
 
-        head.innerText = config.headLine
+            img = document.querySelector('.manage-image')
 
-        first.innerText = config.firstLine
+        img.src= config.imgSrc ? config.imgSrc : "https://mikuimg.oss-cn-shenzhen.aliyuncs.com/Plugin/warning/%E6%B0%B4%E6%9E%9C.png"
 
-        second.innerText = config.secondLine
+        head.innerText = config.headLine ? config.headLine : "Error"
+
+        first.innerText = config.firstLine ? config.firstLine : "You do not have administrator privileges."
+
+        second.innerText = config.secondLine? config.secondLine : "Please get administrator privileges."
 
 
-    //点击事件回调函数
-    var handleClick = function(command) {
+        //点击事件回调函数
+        var handleClick = function (command) {
 
-        var manager = document.querySelector('.manager')
+            var manager = document.querySelector('.manager')
 
-        if (command == "block") {
+            if (command == "block") {
 
-            manager.style.display = "block"
+                manager.style.display = "block"
+
+            } else {
+
+                manager.style.display = "none"
+
+            }
+
+        }
+
+        //获取元素
+        var element = document.querySelector(config.element),
+
+            managerCancel = document.querySelector('.manager-cancel')
+
+        //判断元素是否存在
+        if (element) {
+
+            element.addEventListener('click', function () {
+
+                handleClick("block")
+
+            })
+
+            managerCancel.addEventListener('click', function () {
+
+                handleClick("none")
+
+            })
 
         } else {
 
-            manager.style.display = "none"
+            console.log("元素不存在,请重新配置element值")
 
         }
 
     }
-
-    //获取元素
-    var element = document.querySelector(config.element),
-
-        managerCancel = document.querySelector('.manager-cancel')
-
-    //判断元素是否存在
-    if (element) {
-
-        element.addEventListener('click', function() {
-
-            handleClick("block")
-
-        })
-
-        managerCancel.addEventListener('click', function() {
-
-            handleClick("none")
-
-        })
-
-    }else {
-
-        console.log("元素不存在,请重新配置element值")
-
-    }
-
 
 })()

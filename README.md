@@ -22,13 +22,14 @@
 
 <br/>
 
->头部引入css文件
+>头部引入文件
 
 <br/>
 
 ```
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" media="screen" href="css/warning.style.min.css" />
+<script src="js/warning.main.min.js"></script>
 ```
 
 <br/>
@@ -57,45 +58,31 @@
 
 <br/>
 
->在body后按如下顺序引入js文件
-
-<br/>
+>body后引入script
 
 ```
-<script src="js/warning.config.js"></script>
-<script src="js/warning.main.min.js"></script>
-```
+<script>
 
-<br/>
+    showWarn({
 
-## 配置文件
+        //图片的路径(可选 不填默认为蓝苹果)
+        imgSrc:"https://mikuimg.oss-cn-shenzhen.aliyuncs.com/Plugin/warning/%E6%B0%B4%E6%9E%9C.png",
 
-<br/>
+        //大标题(可选 不填默认为"Error!")
+        headLine:"Error!",
 
->配置文件为```warning.config.js```
+        //第一行文字(可选 不填默认为"You do not have administrator privileges.")
+        firstLine:"You do not have administrator privileges.",
 
-<br/>
+        //第二行文字(可选 不填默认为"Please get administrator privileges.")
+        secondLine:"Please get administrator privileges.",
 
-```
-//配置提示框信息
-var config = {
+        //触发点击事件元素(CSS选择器 必填)
+        element:"button"
 
-    //图片的路径
-    imgSrc:"https://mikuimg.oss-cn-shenzhen.aliyuncs.com/Plugin/warning/%E6%B0%B4%E6%9E%9C.png",
+    })
 
-    //大标题
-    headLine:"Error!",
-
-    //第一行文字
-    firstLine:"You do not have administrator privileges.",
-
-    //第二行文字
-    secondLine:"Please get administrator privileges.",
-
-    //触发点击事件元素(选择器)
-    element:"button"
-
-}
+</script>
 ```
 
 <br/>
