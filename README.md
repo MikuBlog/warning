@@ -61,7 +61,6 @@
 >body后引入script
 
 ```
-<script>
 
     showWarn({
 
@@ -82,7 +81,6 @@
 
     })
 
-</script>
 ```
 
 <br/>
