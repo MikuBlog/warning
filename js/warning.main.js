@@ -17,7 +17,29 @@ var showWarn = (function () {
 
             second = document.querySelector('.manage-content-second'),
 
-            img = document.querySelector('.manage-image')
+            img = document.querySelector('.manage-image'),
+
+            //获取元素
+            element = document.querySelector(config.element),
+
+            managerCancel = document.querySelector('.manager-cancel'),
+
+            //点击事件回调函数
+            handleClick = function (command) {
+
+                var manager = document.querySelector('.manager')
+
+                if (command == "block") {
+
+                    manager.style.display = "block"
+
+                } else {
+
+                    manager.style.display = "none"
+
+                }
+
+            }
 
         img.src= config.imgSrc ? config.imgSrc : "https://mikuimg.oss-cn-shenzhen.aliyuncs.com/Plugin/warning/%E6%B0%B4%E6%9E%9C.png"
 
@@ -26,29 +48,6 @@ var showWarn = (function () {
         first.innerText = config.firstLine ? config.firstLine : "You do not have administrator privileges."
 
         second.innerText = config.secondLine? config.secondLine : "Please get administrator privileges."
-
-
-        //点击事件回调函数
-        var handleClick = function (command) {
-
-            var manager = document.querySelector('.manager')
-
-            if (command == "block") {
-
-                manager.style.display = "block"
-
-            } else {
-
-                manager.style.display = "none"
-
-            }
-
-        }
-
-        //获取元素
-        var element = document.querySelector(config.element),
-
-            managerCancel = document.querySelector('.manager-cancel')
 
         //判断元素是否存在
         if (element) {
