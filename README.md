@@ -22,6 +22,16 @@
 
 <br/>
 
+>为了适配移动端，请在头部加上如下语句
+
+<br/>
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+```
+
+<br/>
+
 >头部引入文件
 
 <br/>
