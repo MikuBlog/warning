@@ -87,6 +87,20 @@ showWarn({
 
 <br/>
 
+## vue使用
+
+<br/>
+
+>在```warning.main.min.js```末尾添加```export default showWarn;```
+
+>在所需组件内引入```import showWarn from "./xxx/warning.main.min.js```
+
+>在main.js引入```import './xxx/warning.style.min.css'```
+
+<br/>
+
+<br/>
+
 ## 兼容性
 
 <br/>
