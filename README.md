@@ -57,7 +57,7 @@
         <div class="manager-content">
             <span class="manage-content-head"></span>
             <div class="manage-content-first"></div>
-	<div class="manage-content-second"></div>
+	    <div class="manage-content-second"></div>
         </div>
         <div class="manager-cancel">
             <i class="fa fa-location-arrow fa-2x"></i>
