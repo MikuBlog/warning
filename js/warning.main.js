@@ -3,7 +3,8 @@ var showWarn = (function () {
 
     return function (obj) {
 
-        var config = obj
+        //判断传入的对象是否存在
+        var config = obj || {}
 
         /*
             headLine:设置显示头信息
