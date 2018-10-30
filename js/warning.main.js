@@ -3,7 +3,7 @@ var showWarn = (function () {
 
     return function (obj) {
 
-        //判断传入的对象是否存在
+        // 判断传入的对象是否存在
         var config = obj || {}
 
         /*
@@ -20,12 +20,12 @@ var showWarn = (function () {
 
             img = document.querySelector('.manage-image'),
 
-            //获取元素
+            // 获取元素
             element = document.querySelector(config.element),
 
             managerCancel = document.querySelector('.manager-cancel'),
 
-            //点击事件回调函数
+            // 点击事件回调函数
             handleClick = function (command) {
 
                 var manager = document.querySelector('.manager')
@@ -50,7 +50,7 @@ var showWarn = (function () {
 
         second.innerText = config.secondLine? config.secondLine : "Please get administrator privileges."
 
-        //判断元素是否存在
+        // 判断元素是否存在
         if (element) {
 
             element.addEventListener('click', function () {
