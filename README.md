@@ -25,6 +25,7 @@
 - 1.0.0 - 『简易提示框插件』
 - 1.0.1 - 『重规划API用法』
 - 1.0.2 - 『简单自适应小屏幕』
+- 1.0.3 - 『增加通过回调函数弹出提示框』
 
 <br/>
 
@@ -84,6 +85,8 @@
 
 <br/>
 
+>通过点击事件触发提示框
+
 ```js
 
 showWarn({
@@ -100,11 +103,37 @@ showWarn({
     // 第二行文字(可选 不填默认为"Please get administrator privileges.")
     secondLine:"Please get administrator privileges.",
 
-    // 触发点击事件元素(CSS选择器 必填)
+    // 触发点击事件元素(可选 不填则会立刻弹出)
     element:"button"
 
 })
 
+```
+
+<br/>
+
+>通过回调函数触发提示框
+
+```
+document.querySelector('button').addEventListener('click', () => {
+
+    showWarn({
+
+        // 图片的路径(可选 不填默认为蓝苹果)
+        imgSrc: "https://mikuimg.oss-cn-shenzhen.aliyuncs.com/Plugin/warning/%E6%B0%B4%E6%9E%9C.png",
+
+        // 大标题(可选 不填默认为"Error!")
+        headLine: "Error!",
+
+        // 第一行文字(可选 不填默认为"You do not have administrator privileges.")
+        firstLine: "You do not have administrator privileges.",
+
+        // 第二行文字(可选 不填默认为"Please get administrator privileges.")
+        secondLine: "Please get administrator privileges."
+
+    })
+
+})
 ```
 
 <br/>
