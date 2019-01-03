@@ -20,15 +20,14 @@ var showWarn = (function () {
 
             img = document.querySelector('.manage-image'),
 
-            // 获取元素
-            element = document.querySelector(config.element),
-
             managerCancel = document.querySelector('.manager-cancel'),
+
+            manager = document.querySelector('.manager'),
+
+            element,
 
             // 点击事件回调函数
             handleClick = function (command) {
-
-                var manager = document.querySelector('.manager')
 
                 if (command == "block") {
 
@@ -42,6 +41,17 @@ var showWarn = (function () {
 
             }
 
+            try{
+
+                // 获取元素
+                element = document.querySelector(config.element)
+
+            }catch(e) {
+
+                element = ""
+
+            }
+
         img.src= config.imgSrc ? config.imgSrc : "https://mikuimg.oss-cn-shenzhen.aliyuncs.com/Plugin/warning/%E6%B0%B4%E6%9E%9C.png"
 
         head.innerText = config.headLine ? config.headLine : "Error"
@@ -49,6 +59,13 @@ var showWarn = (function () {
         first.innerText = config.firstLine ? config.firstLine : "You do not have administrator privileges."
 
         second.innerText = config.secondLine? config.secondLine : "Please get administrator privileges."
+
+        // 监听点击事件
+        managerCancel.addEventListener('click', function () {
+
+            handleClick("none")
+
+        })
 
         // 判断元素是否存在
         if (element) {
@@ -59,15 +76,9 @@ var showWarn = (function () {
 
             })
 
-            managerCancel.addEventListener('click', function () {
-
-                handleClick("none")
-
-            })
-
         } else {
 
-            console.log("元素不存在,请重新配置element值")
+            manager.style.display = "block"
 
         }
 
