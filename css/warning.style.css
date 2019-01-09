@@ -113,7 +113,7 @@
     设置左上方图片样式
 */
 
-img {
+.manage-image {
     position: absolute;
     left: 3em;
     top: 2em;
@@ -164,7 +164,7 @@ img {
         background-image: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
     }
 
-    img {
+    .manage-image {
         position: absolute;
         left: 3em;
         top: 2em;
