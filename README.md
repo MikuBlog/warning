@@ -27,6 +27,7 @@
 - 1.1.0 - 『简单自适应小屏幕』
 - 1.2.0 - 『可通过回调函数弹出提示框』
 - 1.2.1 - 『修复了选择器冲突问题』
+- 1.2.2 - 『增加npm安装使用』
 
 <br/>
 
@@ -43,6 +44,46 @@
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 ```
+
+<br/>
+
+#### Vue使用方法
+
+<br/>
+
+> 直接安装使用 ```npm install warn-box```
+
+>```import 'warn-box/dist/css/warning.style.min.css```
+
+>在所需组件引入 ```import showWarn from 'warn-box'```
+
+>index.html 头部加入<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+>在适合的位置插入如下代码
+
+<br/>
+
+````html
+<div class="manager">
+    <div class="manager-box">
+        <div class="manager-color">
+            <img class="manage-image">
+        </div>
+        <div class="manager-content">
+            <span class="manage-content-head"></span>
+            <div class="manage-content-first"></div>
+	    <div class="manage-content-second"></div>
+        </div>
+        <div class="manager-cancel">
+            <i class="fa fa-location-arrow fa-2x"></i>
+        </div>
+    </div>
+</div>
+```
+
+<br/>
+
+#### HTML页面使用方法
 
 <br/>
 
@@ -140,20 +181,6 @@ document.querySelector('button').addEventListener('click', () => {
 
 })
 ```
-
-<br/>
-
-## vue使用
-
-<br/>
-
->在```warning.main.min.js```末尾添加```export default showWarn;```
-
->在所需组件内引入```import showWarn from "./xxx/warning.main.min.js```
-
->在main.js引入```import './xxx/warning.style.min.css'```
-
->在相应的组件调用showWarn函数并传入配置参数即可
 
 <br/>
 
