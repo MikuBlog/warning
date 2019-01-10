@@ -53,7 +53,7 @@
 
 > 直接安装使用 ```npm install warn-box```
 
->```import 'warn-box/dist/css/warning.style.min.css```
+>在main.js中引入```import 'warn-box/dist/css/warning.style.min.css```
 
 >在所需组件引入 ```import showWarn from 'warn-box'```
 
